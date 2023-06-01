@@ -1,0 +1,47 @@
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/morph/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
+    <title>Delete Account | Edenthought</title>
+</head>
+
+<br>
+
+<body>
+
+    <div class="container bg-white shadow-md p-5 form-layout">
+
+        <form method="POST" autocomplete="off">
+
+            {% csrf_token %}
+
+            <br>
+
+            <p> Are you sure you want to delete this account?</p>
+
+            <br>
+
+            <a href="{% url 'profile-management' %}">Go Back</a>
+
+            <br>
+
+            <br>
+
+            <input class="btn btn-danger" type="submit" value="Submit"/>
+
+        </form>
+
+        <br>
+
+    </div>
+
+</body>
+<script src="{% static 'js/app.js' %}"> </script>
+</html>
