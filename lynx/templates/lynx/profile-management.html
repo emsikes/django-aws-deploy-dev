@@ -12,12 +12,14 @@
     <title>Profile Management | Edenthought</title>
 </head>
 
+{% include 'lynx/account-navbar.html' %}
+
 <br>
 
 <body>
     <div class="container bg-white shadow-md  p-5 form-layout">
 
-        <h1>Profile Management</h1>
+        <h3>Update username and email</h3>
     
         <br>
     
@@ -33,7 +35,7 @@
     
                 <br>
     
-                <input class="btn btn-primary" type="submit" value="submit"/>
+                <input class="btn btn-primary" type="submit" value="Update"/>
     
             </form>
     
@@ -59,7 +61,7 @@
 
                 <br>
 
-                <input class="btn btn-primary" type="submit" value="submit"/>
+                <input class="btn btn-primary" type="submit" value="Update"/>
 
             </form>
 
@@ -69,6 +71,10 @@
         <br>
 
         <div class="container bg-white shadow-md  p-5 form-layout">
+
+            <h3>Delete your account</h3>
+
+            <br>
 
             <a href="{% url 'delete-account' %}">Delete Account</a>
 

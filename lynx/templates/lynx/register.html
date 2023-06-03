@@ -12,11 +12,11 @@
     <title>Registration Page | Edenthought</title>
 </head>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
-        <a class="navbar-brand main-heading">        
-        &nbsp; Edenthought
-        </a>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+    <a class="navbar-brand main-heading" href="{% url '' %}">        
+    &nbsp; Edenthought
+    </a>
+</nav>
 
 <body>
 
@@ -40,9 +40,18 @@
             <br>
             {{ form.password2|as_crispy_field }}
 
-            <input class="btn btn-primary" type="submit" value="submit">
+            <br>
+
+            <input class="btn btn-primary w-100" type="submit" value="Create my account">
 
         </form>
+
+        <br>
+        <br>
+
+        <p>Already have an account?</p>
+            
+        <a href="{% url 'my-login' %}">Login to my account</a> </p>
 
     </div>  
 
